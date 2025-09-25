@@ -28,7 +28,7 @@ async function initDB() {
     }
 }
 
-app.get("/api/transactions", transactionsRoute)
+app.use("/api/transactions", transactionsRoute)
 
 initDB().then(()=> {
     app.listen(PORT, ()=>{
